@@ -7,8 +7,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 function App() {
   return (
     <>
-      <Navbar />
-      {/* <Gallery /> */}
+      <Gallery />
     </>
   );
 }
