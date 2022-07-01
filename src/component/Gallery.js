@@ -1,10 +1,11 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Header from "./Gallery/Header";
+import Carousel from "./Gallery/Carousel";
 
 const Gallery = () => {
   return (
-    <div className="flex flex-col relative">
+    <div >
             {/* <div className="absolute w-full z-20">
                 <Navbar />
             </div>
@@ -17,7 +18,8 @@ const Gallery = () => {
             <DefaultFooter />
         </div> */}
         <Navbar />
-        <Header />
+        {/* <Header /> */}
+        <Carousel />
     </div>
   );
 };
