@@ -18,8 +18,8 @@ const Gallery = () => {
             <DefaultFooter />
         </div> */}
         <Navbar />
-        {/* <Header /> */}
-        <Carousel />
+        <Header />
+        {/* <Carousel /> */}
     </div>
   );
 };
