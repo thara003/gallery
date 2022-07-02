@@ -29,7 +29,7 @@ export default function Header() {
       </Typography>
         </div>
         </div>
-        <div className="flex gap-6 pt-12">
+        <div className="flex gap-6 pt-12 flex-wrap m-2">
         <Button variant="gradient" className='focus:outline-none focus:ring focus:ring-300'>
         <a href="#" className="text-white active">
           All</a>

@@ -18,7 +18,7 @@ export default function GalleryCard() {
       </CardHeader>
       <CardBody className="text-center">
         <Typography variant="h5" className="mb-2">
-          Cozy 5 Stars Apartment
+          Event name
         </Typography>
         <Typography>
           The place is close to Barceloneta Beach and bus stop just 2 min by
@@ -27,11 +27,8 @@ export default function GalleryCard() {
         </Typography>
       </CardBody>
       <CardFooter divider className="flex items-center justify-between py-3">
-        <Typography variant="small">$899/night</Typography>
-        <Typography variant="small" color="grey" className="flex gap-1">
-          <i className="fas fa-map-marker-alt fa-sm mt-[3px]" />
-          Barcelona, Spain
-        </Typography>
+        <Typography variant="small">
+          <a href="">Show more &rarr;</a></Typography>
       </CardFooter>
     </Card>
   );
