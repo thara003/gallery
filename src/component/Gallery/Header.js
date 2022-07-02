@@ -1,5 +1,6 @@
 
 import { Button } from '@material-tailwind/react';
+import { Typography } from "@material-tailwind/react";
 
 export default function Header() {
   return (
@@ -16,17 +17,20 @@ export default function Header() {
 <div className='max-w-screen-lg mx-auto px-3 items-center justify-center flex flex-col'>
     <div className="pt-24 items-center justify-center flex flex-col">
       <div className="text-center">
-        <h1 className="text-5xl font-serif font-bold uppercase underline decoration-blue-500/30 text-center">Gallery</h1>
+        {/* <h1 className="text-5xl font-serif font-bold uppercase underline decoration-blue-500/30 text-center">Gallery</h1> */}
+        <Typography variant="h1" color="blue-grey">
+          Gallery
+      </Typography>
         </div>
         <div className="text-center w-2/3">
-        <p className="pt-5 text-center text-gray-600 text-sm">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-        </p>
+        <Typography variant="lead"color="blue-grey">
+        Material Tailwind is an easy to use components library for Tailwind CSS
+        and Material Design.
+      </Typography>
         </div>
         </div>
         <div className="flex gap-6 pt-12">
         <Button variant="gradient" className='focus:outline-none focus:ring focus:ring-300'>
-        {/* <p>All</p> */}
         <a href="#" className="text-white active">
           All</a>
       </Button>
