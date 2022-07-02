@@ -5,30 +5,29 @@ import {
   CardFooter,
   Typography,
 } from "@material-tailwind/react";
+// import { CardData } from "./CardData";
  
-export default function GalleryCard() {
+export default function GalleryCard({ title, description, imgSrc, href }) {
   return (
     <Card className="py-5 mx-2 my-6 w-96">
       <CardHeader color="blue" className="relative h-56">
         <img
-          src="/img/blog.jpg"
-          alt="img-blur-shadow"
+          src={imgSrc}
+          alt={title}
           className="h-full w-full"
         />
       </CardHeader>
       <CardBody className="text-center">
         <Typography variant="h5" className="mb-2">
-          Event name
+          {title}
         </Typography>
         <Typography>
-          The place is close to Barceloneta Beach and bus stop just 2 min by
-          walk and near to "Naviglio" where you can enjoy the main night life in
-          Barcelona.
+          {description}
         </Typography>
       </CardBody>
       <CardFooter divider className="flex items-center justify-between py-3">
         <Typography variant="small">
-          <a href="">Show more &rarr;</a></Typography>
+          <a href={href}>Show more &rarr;</a></Typography>
       </CardFooter>
     </Card>
   );
