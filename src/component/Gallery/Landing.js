@@ -1,51 +1,9 @@
 import React from "react";
 import GalleryCard from "./GalleryCard";
-// import CardData from './CardData'
+import { CardData } from "./CardData";
+import { Button } from "@material-tailwind/react";
 import { Typography } from "@material-tailwind/react";
-const CardData = [
-  {
-    title: "Event Name 1",
-    year: 2020,
-    description: `lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
-    imgSrc: "/assets/images/google.png",
-    href: "/gallery/event-name1",
-  },
-  {
-    title: "Event Name 2",
-    year: 2020,
-    description: `lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
-    imgSrc: "/assets/images/google.png",
-    href: "/gallery/event-name1",
-  },
-  {
-    title: "Event Name 3",
-    year: 2021,
-    description: `lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
-    imgSrc: "/assets/images/google.png",
-    href: "/gallery/event-name1",
-  },
-  {
-    title: "Event Name 4",
-    year: 2021,
-    description: `lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
-    imgSrc: "/assets/images/google.png",
-    href: "/gallery/event-name1",
-  },
-  {
-    title: "Event Name 5",
-    year: 2022,
-    description: `lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
-    imgSrc: "/assets/images/google.png",
-    href: "/gallery/event-name1",
-  },
-  {
-    title: "Event Name 6",
-    year: 2022,
-    description: `lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
-    imgSrc: "/assets/images/google.png",
-    href: "/gallery/event-name1",
-  },
-];
+
 const CardLister = (year) => {
   return CardData.map((card, index) => {
     if (card.year === year) {
@@ -61,11 +19,66 @@ const CardLister = (year) => {
     }
   });
 };
-
+const HandleClick = (id) => {
+  if (id === "all") {
+    document.getElementById("2020").style.display = "block";
+    document.getElementById("2021").style.display = "block";
+    document.getElementById("2022").style.display = "block";
+}
+  else if (id === "2020") {
+    document.getElementById("2020").style.display = "block";
+    document.getElementById("2021").style.display = "none";
+    document.getElementById("2022").style.display = "none";
+  }
+  else if (id === "2021") {
+    document.getElementById("2020").style.display = "none";
+    document.getElementById("2021").style.display = "block";
+    document.getElementById("2022").style.display = "none";
+  }
+  else if (id === "2022") {
+    document.getElementById("2020").style.display = "none";
+    document.getElementById("2021").style.display = "none";
+    document.getElementById("2022").style.display = "block";
+  }
+}
 const Landing = () => {
+  
   return (
-    <div className="max-w-screen-lg mx-auto my-4 px-3">
-      <div className="bg-slate-800 p-4 shadow-lg rounded-lg overflow-hidden" id="2020">
+    <div className="max-w-screen-lg mx-auto px-3 items-center justify-center flex flex-col">
+      <div className="flex gap-6 pt-12 flex-wrap m-2">
+        <Button
+          variant="gradient"
+          className="focus:outline-none focus:ring focus:ring-300"
+          onClick={() => HandleClick("all")}
+        >
+          <p>All</p>
+        </Button>
+        <Button
+          variant="gradient"
+          className="focus:outline-none focus:ring focus:ring-300"
+          onClick={() => HandleClick("2020")}
+        >
+          <p>Events-2020</p>
+        </Button>
+        <Button
+          variant="gradient"
+          className="focus:outline-none focus:ring focus:ring-300"
+          onClick={() => HandleClick("2021")}
+        >
+          <p>Events-2021</p>
+        </Button>
+        <Button
+          variant="gradient"
+          className="focus:outline-none focus:ring focus:ring-300"
+          onClick={() => HandleClick("2022")}
+        >
+          <p>Events-2022</p>
+        </Button>
+      </div>
+      <div
+        className="bg-slate-800 p-4 shadow-lg rounded-lg overflow-hidden visible"
+        id="2020"
+      >
         <Typography variant="h4" color="grey" className="m-2">
           Events-2020
         </Typography>
@@ -73,7 +86,10 @@ const Landing = () => {
           {CardLister(2020)}
         </div>
       </div>
-      <div className="bg-slate-800 p-4 shadow-lg rounded-lg overflow-hidden" id="2021">
+      <div
+        className="bg-slate-800 p-4 shadow-lg rounded-lg overflow-hidden visible"
+        id="2021"
+      >
         <Typography variant="h4" color="grey" className="m-2">
           Events-2021
         </Typography>
@@ -81,7 +97,10 @@ const Landing = () => {
           {CardLister(2021)}
         </div>
       </div>
-      <div className="bg-slate-800 p-4 shadow-lg rounded-lg overflow-hidden" id="2022">
+      <div
+        className="bg-slate-800 p-4 shadow-lg rounded-lg overflow-hidden visible"
+        id="2022"
+      >
         <Typography variant="h4" color="grey" className="m-2">
           Events-2022
         </Typography>

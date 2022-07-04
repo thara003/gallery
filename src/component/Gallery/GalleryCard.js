@@ -9,7 +9,7 @@ import {
  
 export default function GalleryCard({ title, description, imgSrc, href }) {
   return (
-    <Card className="py-5 mx-2 my-6 w-96">
+    <Card className="py-5 mx-2 my-6 w-96 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
       <CardHeader color="blue" className="relative h-56">
         <img
           src={imgSrc}
