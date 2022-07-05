@@ -2,7 +2,7 @@
   "name": "gallery_page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://thara003.github.io/gallery_page",
+  "homepage": "https://thara003.github.io/gallery",
   "dependencies": {
     "@headlessui/react": "^1.6.5",
     "@material-tailwind/react": "^1.0.6",
